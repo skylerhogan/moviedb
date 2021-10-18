@@ -47,7 +47,7 @@ export const Header = () => {
       <div className="header__wrap container">
         <div className="logo">
           <img src={logo} alt="logo" />
-          <Link to="/">strmlss</Link>
+          <Link to="/">streamless</Link>
         </div>
         <ul className="header__nav">
           {headerNav.map((e, i) => (
