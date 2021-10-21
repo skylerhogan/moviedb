@@ -10,6 +10,8 @@ import VideoList from './VideoList';
 
 import MovieList from '../../components/movie-list/MovieList';
 
+import star from '../../assets/boxicons-2.0.9/svg/solid/bxs-star.svg';
+
 const Detail = () => {
 
     const { category, id } = useParams();
@@ -30,6 +32,7 @@ const Detail = () => {
             {
                 item && (
                     <>
+                    {console.log(item)}
                         <div className="banner" style={{backgroundImage: `url(${apiConfig.originalImage(item.backdrop_path || item.poster_path)})`}}></div>
                         <div className="mb-3 movie-content container">
                             <div className="movie-content__poster">
@@ -39,6 +42,7 @@ const Detail = () => {
                                 <h1 className="title">
                                     {item.title || item.name}
                                 </h1>
+                                <h3 className="rating">{item.vote_average}<img className="rating rating__icon" src={star} alt="" /></h3>
                                 <div className="genres">
                                     {
                                         item.genres && item.genres.slice(0, 5).map((genre, i) => (

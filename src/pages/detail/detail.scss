@@ -114,3 +114,18 @@
         margin-bottom: 1.5rem;
     }
 }
+
+
+.rating {
+    float: right;
+    font-size: 1.5rem;
+    margin-right: 5rem;
+
+    &__icon {
+        filter: invert(100%) sepia(66%) saturate(6143%) hue-rotate(324deg) brightness(86%) contrast(92%) !important;
+        width: 2rem;
+        margin-left: .25rem;
+     
+        position: absolute;
+    }
+}
