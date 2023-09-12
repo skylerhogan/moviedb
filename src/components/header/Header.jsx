@@ -5,7 +5,6 @@ import { Link, useLocation } from "react-router-dom";
 import "./header.scss";
 
 import logo from "../../assets/film.svg";
-import { EffectFlip } from "swiper";
 
 const headerNav = [
   {
@@ -30,15 +29,18 @@ export const Header = () => {
 
   useEffect(() => {
     const shrinkHeader = () => {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        headerRef.current.classList.add('shrink');
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        headerRef.current.classList.add("shrink");
       } else {
-        headerRef.current.classList.remove('shrink');
+        headerRef.current.classList.remove("shrink");
       }
-    }
-    window.addEventListener('scroll', shrinkHeader);
+    };
+    window.addEventListener("scroll", shrinkHeader);
     return () => {
-      window.removeEventListener('scroll', shrinkHeader);
+      window.removeEventListener("scroll", shrinkHeader);
     };
   }, []);
 

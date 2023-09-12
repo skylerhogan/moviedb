@@ -53,7 +53,7 @@ const Detail = () => {
             <div className="movie-content__info">
               <h1 className="title">{item.title || item.name}</h1>
               <h3 className="rating">
-                {item.vote_average}
+                {Math.round(item.vote_average * 10) / 10}
                 <img className="rating rating__icon" src={star} alt="" />
               </h3>
               <div className="genres">
